@@ -1,0 +1,83 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* 天气 */
+.content{
+  margin:10px; 
+  background: #86df9b;
+  -webkit-box-shadow:5px 5px 5px rgba(0, 204, 204, .5);  
+  padding: 8px;
+  /* -moz-box-shadow:3px 3px 3px rgba(0, 204, 204, .5);  
+  box-shadow:3px 3px 3px rgba(0, 204, 204, .5);  */
+}
+.content .temp{
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+.city{
+  width: 100%;
+  text-align: right;
+  margin-top: 5px; 
+}
+.weather{
+  font-size: 16px;
+}
+.weathertips{
+  margin-top: 5px;
+}
+/* 地图 */
+.wrapper{
+  height: 100%;
+  background:#fff;
+}
+.page-body-form-value{
+  font-size: 14px;
+  color:darkturquoise;
+  font-weight: bold;
+  padding-left: 15px;
+  border: 1px solid rgb(72, 165, 131);
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+}
+.page-body-form-key{
+  font-size:14px;
+  padding: 10px;
+  margin-top:15px;
+  font-family: "Microsoft Yahei";
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+.page-body-button{
+  margin-top:20px;
+  line-height: 2;
+}
+.weixin{
+  width: 90%;
+  margin: auto;
+  height: 100px;
+}
+.dian{
+  width: 90%;
+  margin: 10px auto;
+}

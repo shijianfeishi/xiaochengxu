@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/city/index",
+    "pages/head/head",
+    "pages/about/about",
+    "pages/goodslist/goodslist",
+    "pages/goodsdetail/goodsdetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广州禧晟味食品有限公司",
+    "navigationBarTextStyle":"black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/b1.png",
+        "iconPath": "pages/images/b1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/b2.png",
+        "iconPath": "pages/images/b2.png",
+        "pagePath": "pages/goodslist/goodslist",
+        "text": "品牌"
+      },
+      {
+        "selectedIconPath": "pages/images/b3.png",
+        "iconPath": "pages/images/b3.png",
+        "pagePath": "pages/about/about",
+        "text": "介绍"
+      }
+    ]
+  },
+  "debug": true
+}

@@ -1,0 +1,169 @@
+<import src="./../head/head.wxml" />
+<import src="./../swiper/swiper.wxml" />
+<import src ="./../loveparticle/loveparticle.wxml"/>
+<!-- 头部 -->
+<!-- <template is="head" data="{{section: section}}" /> -->
+ 
+ <!-- 轮播图 -->
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" indicator-active-color="#ffffff" circular="true" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+    <button bindtap="changeAutoplay"> autoplay </button>
+    <slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+    <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration -->
+  </view>
+<!--导航条--> 
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>
+<!--首页--> 
+<view hidden="{{currentTab!==0}}">
+  <view class="zan-card" wx:for="{{goodlist}}" bindtap="todetail" wx:key="unique" data-idx="{{item.goodid}}">
+    <!-- 卡片左侧商品图片 -->
+    <view class="zan-card__thumb">
+      <image class="zan-card__img" src="{{item.goodurl}}" mode="aspectFit"></image>
+    </view>
+    <!-- 卡片右侧详情描述 -->
+    <view class="zan-card__detail">
+      <!-- 商品标题行 -->
+      <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+      <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+      <view class="zan-card__detail-row">
+        <view class="zan-card__right-col">¥ {{item.goodprice}}</view>
+        <view class="zan-card__left-col zan-ellipsis--l2">
+          {{item.goodname}}
+        </view>
+      </view>
+      <!-- 商品附属信息展示行 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__right-col">库存：{{item.goodnum}}</view>
+        <view class="zan-card__left-col">
+          {{item.goodname}}
+        </view>
+      </view>
+      <!-- 商品操作按钮相关 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__left-col zan-c-red">量大价更优</view>
+      </view>
+    </view>
+  </view>
+</view> 
+<!--天气--> 
+<view hidden="{{currentTab!==1}}">
+<view class="zan-card" wx:for="{{goodlist}}" wx:key="unique">
+    <!-- 卡片左侧商品图片 -->
+    <view class="zan-card__thumb">
+      <image class="zan-card__img" src="{{item.goodurl}}" mode="aspectFit"></image>
+    </view>
+    <!-- 卡片右侧详情描述 -->
+    <view class="zan-card__detail">
+      <!-- 商品标题行 -->
+      <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+      <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+      <view class="zan-card__detail-row">
+        <view class="zan-card__right-col">¥ {{item.goodprice}}</view>
+        <view class="zan-card__left-col zan-ellipsis--l2">
+          {{item.goodname}}
+        </view>
+      </view>
+      <!-- 商品附属信息展示行 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__right-col">{{item.goodname}}</view>
+        <view class="zan-card__left-col">
+          {{item.goodname}}
+        </view>
+      </view>
+      <!-- 商品操作按钮相关 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__left-col zan-c-red">量大价更优</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='content'>
+    <view class='today'>
+      <view class='info'>
+        <view class='temp'>
+          <view class='fs120'>{{weather.temperature.data}}℃</view>
+          <view class='fs100'>湿度 {{weather.humidity.data}}</view>
+        </view>
+        <view class='weather cfff'>{{weather.weather.data}} {{weather.winddirection.data}} {{weather.windpower.data}}</view>
+        <view class='weathertips cfff'>友情提示：今天天气不错，是风和日丽的，适合出去玩</view>
+        <view class='city cfff fs100'>{{weather.liveData.province}} {{cityname}} {{weather.city.data}}</view>
+      </view>
+    </view>
+  </view> -->
+</view> 
+  
+<!--定位--> 
+<view hidden="{{currentTab!==2}}">
+<view class="zan-card" wx:for="{{goodlist}}" wx:key="unique">
+    <!-- 卡片左侧商品图片 -->
+    <view class="zan-card__thumb">
+      <image class="zan-card__img" src="{{item.goodurl}}" mode="aspectFit"></image>
+    </view>
+    <!-- 卡片右侧详情描述 -->
+    <view class="zan-card__detail">
+      <!-- 商品标题行 -->
+      <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+      <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+      <view class="zan-card__detail-row">
+        <view class="zan-card__right-col">¥ {{item.goodprice}}</view>
+        <view class="zan-card__left-col zan-ellipsis--l2">
+          {{item.goodnum}}
+        </view>
+      </view>
+      <!-- 商品附属信息展示行 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__right-col">{{item.goodname}}</view>
+        <view class="zan-card__left-col">
+          {{item.goodname}}
+        </view>
+      </view>
+      <!-- 商品操作按钮相关 -->
+      <view class="zan-card__detail-row zan-c-gray-darker">
+        <view class="zan-card__left-col zan-c-red">量大价更优</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="wrapper">
+    <view class="page-body">
+      <view class="page-body-wrapper">
+        <form bindsubmit="openLocation">
+          <view class="page-body-form">
+            <text class="page-body-form-key">城市：</text>
+            <input class="page-body-form-value" type="text" value="{{weather.liveData.province}}{{cityname}}{{weather.city.data}}" name="longitude" />
+            <text class="page-body-form-key">经度</text>
+            <input class="page-body-form-value" type="text" value="{{location.longitude}}" name="longitude" />
+            <text class="page-body-form-key">维度</text>
+            <input class="page-body-form-value" type="text" value="{{location.latitude}}" name="latitude" />
+          </view>
+          <view class="page-body-buttons">
+            <button class="page-body-button" type="primary" bindtap="getLocation">获取位置</button>
+            <button class="page-body-button" type="primary" formType="submit">查看位置</button>
+            <button class="page-body-button" type="primary" bindtap="chooseLocation">选择位置</button>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view> -->
+</view>
+
+
+<!-- <view>  
+  <image src="/pages/images/collect.png" class="img-style" animation="{{animCollect}}" bindtap="collect"></image>  
+  <image src="/pages/images/transpond.png" class="img-style" animation="{{animTranspond}}" bindtap="transpond"></image>  
+  <image src="/pages/images/input.png" class="img-style" animation="{{animInput}}" bindtap="input"></image>  
+  <image src="/pages/images/plus.png" class="img-plus-style" animation="{{animPlus}}" bindtap="plus"></image>  
+</view> -->
+
+<!-- <view class="v-cooltimer">
+        <canvas canvas-id="canvas_ct" style="{{canvas_ct_style}}" class="canvas-ct"/>
+</view> -->
+<!-- <button bindtap="tocity">选择城市</button> -->

@@ -1,0 +1,36 @@
+<view>
+      <view class='fs40 fw wp100 tac mt10'>广州禧晟味食品有限公司</view>
+      <view class='dian mt10'>
+        <image style='width:100%;height:320px;' src='http://www.xishengwei.xyz/images/dian1.png'></image>
+      </view>
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>公司宗旨：</view>
+        <view class='fl'>致力于提高生活品味，享受品味人生</view>
+      </view>
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>联系手机：</view>
+        <view class='fl'>13929898884</view>
+      </view> 
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>联系手机：</view>
+        <view class='fl'>13660284447</view>
+      </view> 
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>QQ：</view>
+        <view class='fl'>2297596831</view>
+      </view>
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>联系固话：</view>
+        <view class='fl'>0757-85916032</view>
+      </view>
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>地址：</view>
+        <view class='fl'>广东省广州市荔湾区芳村海宝湾水产市场</view>
+      </view>
+      <view class='wp100 mt10 clear fs35'>
+        <view class='fl' style='margin-left:25px;'>长按识别二维码，关注公众号有惊喜<view class='red'>✈✈✈</view></view>
+      </view>
+      <view class='weixin mt10' style='padding:0 5%;'>
+        <image style='width:100%;height:400px;margin:auto;' src='./../images/weixin2.jpg'></image>
+      </view>
+  </view>

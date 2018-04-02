@@ -1,0 +1,19 @@
+<template name="head">
+  <view class="top-news">
+     <view class="self-box">
+         <view class="img-self">
+            <!-- <image src="../../images/self.jpg"></image> -->
+         </view>
+     </view>
+     <view class="self-add">
+         <view class="img-add">
+            <view class="zan-icon zan-icon-location"></view>
+         </view>
+     </view>
+      <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" >
+            <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+        </scroll-view>
+      </view>
+</view>
+</template>
