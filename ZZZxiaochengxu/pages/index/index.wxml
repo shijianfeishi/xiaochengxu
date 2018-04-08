@@ -1,6 +1,6 @@
 <import src="./../head/head.wxml" />
 <import src="./../swiper/swiper.wxml" />
-<import src ="./../loveparticle/loveparticle.wxml"/>
+<!-- <import src ="./../loveparticle/loveparticle.wxml"/> -->
 <!-- 头部 -->
 <!-- <template is="head" data="{{section: section}}" /> -->
  
@@ -8,7 +8,7 @@
   <view>
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" indicator-active-color="#ffffff" circular="true" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
         <swiper-item>
           <image src="{{item}}" class="slide-image" width="355" height="150"/>
         </swiper-item>
@@ -103,7 +103,7 @@
   
 <!--定位--> 
 <view hidden="{{currentTab!==2}}">
-<view class="zan-card" wx:for="{{goodlist}}" wx:key="unique">
+  <view class="zan-card" wx:for="{{goodlist}}" wx:key="unique">
     <!-- 卡片左侧商品图片 -->
     <view class="zan-card__thumb">
       <image class="zan-card__img" src="{{item.goodurl}}" mode="aspectFit"></image>

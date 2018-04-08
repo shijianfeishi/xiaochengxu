@@ -102,6 +102,19 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    wx.request({
+      url: '', //仅为示例，并非真实的接口地址
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
     that.setData({
       goodlist: goodlist.list.list
     });
@@ -606,4 +619,22 @@ Page({
       url: './../goodsdetail/goodsdetail?id=' + id
     })
   },
+  onShareAppMessage: function (res) {
+    var that = this;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '广州禧晟味食品有限公司',
+      path: '/pages/index/index',
+      imageUrl: 'http://www.xishengwei.xyz/images/dian1.png',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  }
 })
